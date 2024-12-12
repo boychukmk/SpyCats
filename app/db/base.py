@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://postgres:13283@localhost:5432/SpyCats")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://user:password@localhost/spy_cat_agency")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

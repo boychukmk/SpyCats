@@ -3,7 +3,6 @@ from typing import List, Optional
 
 
 class TargetBase(BaseModel):
-    id: int
     name: str
     country: str
     notes: Optional[str] = None
@@ -14,7 +13,6 @@ class TargetBase(BaseModel):
 
 
 class MissionCreate(BaseModel):
-    id: int
     name: str
     cat_id: Optional[int] = None
     targets: List[TargetBase]
